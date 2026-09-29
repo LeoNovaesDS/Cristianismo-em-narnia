@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cristianismo em Nárnia | As Crônicas de Nárnia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #f4f1e8;
+            color: #2d2a26;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(
+                rgba(20, 25, 22, 0.92),
+                rgba(20, 25, 22, 0.92)
+            );
+            color: #f5f1e6;
+            padding: 30px 8%;
+            border-bottom: 4px solid #b59a5b;
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            color: #d6c89b;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #f5f1e6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6b86a;
+        }
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                linear-gradient(
+                    rgba(26, 35, 30, 0.78),
+                    rgba(26, 35, 30, 0.82)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #536657 0%,
+                    #27352d 55%,
+                    #17201b 100%
+                );
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: #f1dfaa;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 760px;
+            margin: auto;
+            color: #f1eee6;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background-color: #b59a5b;
+            color: #1f211e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #d2b96e;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 25px;
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .introducao h2 {
+            font-size: 2.2rem;
+            color: #344437;
+            margin-bottom: 20px;
+        }
+
+        .introducao p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 1.08rem;
+        }
+
+        .linha {
+            width: 70px;
+            height: 4px;
+            background-color: #b59a5b;
+            margin: 18px auto 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #536657;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            color: #344437;
+            margin-bottom: 12px;
+            font-size: 1.35rem;
+        }
+
+        .card p {
+            font-size: 0.98rem;
+        }
+
+        .destaque {
+            margin-top: 65px;
+            padding: 45px;
+            background-color: #303d34;
+            color: #f5f1e6;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .destaque h2 {
+            color: #e2cb89;
+            margin-bottom: 18px;
+            font-size: 2rem;
+        }
+
+        .destaque p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 1.05rem;
+        }
+
+        .citacao {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 4px solid #b59a5b;
+            font-style: italic;
+            color: #e8dfc7;
+        }
+
+        footer {
+            background-color: #1c241f;
+            color: #d9d5c9;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer strong {
+            color: #e1c97e;
+        }
+
+        @media (max-width: 800px) {
+            .topo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 2.4rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .hero {
+                min-height: 450px;
+                padding: 50px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .destaque {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="topo">
+
+            <div class="logo">
+                <h1>Cristianismo em Nárnia</h1>
+                <p>Literatura, fé e simbolismo nas obras de C. S. Lewis</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="detalhes.html">Detalhes</a></li>
+                    <li><a href="contato.html">Sobre mim</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Entre em Nárnia e descubra além da história</h2>
+
+            <p>
+                As Crônicas de Nárnia apresentam uma aventura fantástica
+                repleta de reis, criaturas mágicas, batalhas e mundos
+                desconhecidos. Porém, por trás dessa fantasia existe também
+                uma profunda relação com ideias presentes no cristianismo.
+            </p>
+
+            <a href="detalhes.html" class="botao">
+                Explorar o conteúdo
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <section class="introducao">
+
+            <h2>Uma história fantástica com significado profundo</h2>
+
+            <div class="linha"></div>
+
+            <p>
+                Escrita pelo autor britânico C. S. Lewis, As Crônicas de
+                Nárnia se tornaram uma das obras mais conhecidas da literatura
+                fantástica. A série acompanha diferentes personagens que
+                descobrem o mundo de Nárnia e participam de acontecimentos
+                que envolvem amizade, coragem, traição, sacrifício, perdão
+                e redenção.
+            </p>
+
+            <br>
+
+            <p>
+                Para além da aventura, Lewis utilizou elementos de sua própria
+                visão cristã para construir diversos aspectos da narrativa.
+                Esses elementos aparecem nos acontecimentos, nos conceitos
+                apresentados pela história e, principalmente, na construção
+                de determinados personagens.
+            </p>
+
+        </section>
+
+
+        <section class="cards">
+
+            <article class="card">
+
+                <h3>Aslan</h3>
+
+                <p>
+                    O leão é a figura mais diretamente associada ao
+                    cristianismo dentro da obra. Aslan representa uma figura
+                    de autoridade, amor, justiça e sacrifício. Sua história
+                    apresenta paralelos claros com aspectos da narrativa
+                    cristã sobre Jesus Cristo.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Edmundo</h3>
+
+                <p>
+                    Edmundo começa sua trajetória cometendo uma traição
+                    motivada por seus próprios desejos. Sua história permite
+                    observar temas como pecado, arrependimento, perdão,
+                    transformação e redenção.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>O sacrifício</h3>
+
+                <p>
+                    Um dos momentos mais importantes de O Leão, a Feiticeira
+                    e o Guarda-Roupa envolve a entrega voluntária de Aslan
+                    para salvar outra pessoa. A cena apresenta fortes
+                    correspondências com a ideia cristã de sacrifício.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <section class="destaque">
+
+            <h2>Por que Nárnia?</h2>
+
+            <p>
+                C. S. Lewis não escreveu simplesmente uma história religiosa
+                disfarçada de fantasia. Sua construção é mais interessante:
+                ele criou um universo próprio, com personagens, conflitos
+                e regras diferentes, permitindo que temas cristãos fossem
+                apresentados por meio de uma narrativa fantástica.
+            </p>
+
+            <p style="margin-top: 18px;">
+                Dessa maneira, o leitor pode acompanhar uma aventura sobre
+                outro mundo e, ao mesmo tempo, encontrar conceitos como
+                sacrifício, morte, ressurreição, pecado, perdão, esperança
+                e redenção.
+            </p>
+
+            <div class="citacao">
+                Este blog busca observar justamente essa construção e
+                compreender como literatura e fé se encontram em Nárnia.
+            </div>
+
+        </section>
+
+
+        <section class="introducao" style="margin-top: 70px; margin-bottom: 0;">
+
+            <h2>O que você encontrará aqui?</h2>
+
+            <div class="linha"></div>
+
+            <p>
+                Nas próximas páginas, serão apresentados aspectos da vida
+                de C. S. Lewis, a história de As Crônicas de Nárnia e
+                algumas das principais relações entre seus personagens,
+                acontecimentos e elementos do cristianismo.
+            </p>
+
+            <br>
+
+            <p>
+                A proposta é olhar para Nárnia não apenas como uma obra de
+                fantasia, mas também como uma demonstração de como símbolos,
+                conceitos e ideias podem ser transformados em narrativa.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>Cristianismo em Nárnia</strong>
+        </p>
+
+        <p>
+            Projeto acadêmico — Desenvolvimento Web
+        </p>
+
+        <p>
+            FATEC Olímpia • Desenvolvimento de Software Multiplataforma
+        </p>
+
+        <p>
+            Desenvolvido por Leonardo
+        </p>
+
+    </footer>
+
+</body>
+</html>

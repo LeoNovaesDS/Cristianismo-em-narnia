@@ -1,0 +1,469 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Mim | Cristianismo em Nárnia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #f4f1e8;
+            color: #2d2a26;
+            line-height: 1.75;
+        }
+
+        header {
+            background-color: #1c241f;
+            color: #f5f1e6;
+            padding: 30px 8%;
+            border-bottom: 4px solid #b59a5b;
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            color: #d6c89b;
+            font-size: 0.95rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #f5f1e6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6b86a;
+        }
+
+        .titulo {
+            background:
+                linear-gradient(
+                    rgba(26, 35, 30, 0.9),
+                    rgba(26, 35, 30, 0.9)
+                ),
+                radial-gradient(
+                    circle,
+                    #536657,
+                    #17201b
+                );
+
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .titulo h2 {
+            font-size: 3rem;
+            color: #f1dfaa;
+            margin-bottom: 15px;
+        }
+
+        .titulo p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 65px 25px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            color: #344437;
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            color: #536657;
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+        }
+
+        .linha {
+            width: 70px;
+            height: 4px;
+            background-color: #b59a5b;
+            margin-bottom: 25px;
+        }
+
+        .sobre {
+            background-color: #fffdf7;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .sobre h3 {
+            color: #344437;
+            margin-top: 25px;
+        }
+
+        .sobre h3:first-child {
+            margin-top: 0;
+        }
+
+        .contato {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .cartao {
+            background-color: #fffdf7;
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #b59a5b;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .cartao h3 {
+            color: #344437;
+        }
+
+        .email {
+            color: #536657;
+            font-weight: bold;
+            font-size: 1.05rem;
+            word-break: break-word;
+        }
+
+        .projeto {
+            background-color: #303d34;
+            color: #f5f1e6;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .projeto h2 {
+            color: #e2cb89;
+        }
+
+        .projeto p {
+            margin-bottom: 18px;
+        }
+
+        .assinatura {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: #665f52;
+        }
+
+        footer {
+            background-color: #1c241f;
+            color: #d9d5c9;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: #e1c97e;
+        }
+
+        @media (max-width: 800px) {
+
+            .topo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .titulo h2 {
+                font-size: 2.3rem;
+            }
+
+            .contato {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .titulo {
+                padding: 50px 20px;
+            }
+
+            .titulo h2 {
+                font-size: 2rem;
+            }
+
+            .sobre,
+            .cartao,
+            .projeto {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="topo">
+
+            <div class="logo">
+                <h1>Cristianismo em Nárnia</h1>
+                <p>Literatura, fé e simbolismo nas obras de C. S. Lewis</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="detalhes.html">Detalhes</a></li>
+                    <li><a href="contato.html">Sobre mim</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <section class="titulo">
+
+        <h2>Sobre mim</h2>
+
+        <p>
+            Conheça um pouco sobre o autor deste projeto e os motivos
+            que levaram à escolha do tema.
+        </p>
+
+    </section>
+
+
+    <main>
+
+        <section>
+
+            <h2>Quem sou eu?</h2>
+
+            <div class="linha"></div>
+
+            <div class="sobre">
+
+                <h3>Leonardo Novaes</h3>
+
+                <p>
+                    Sou um jovem de 20 anos, atualmente cursando
+                    Desenvolvimento de Software Multiplataforma na FATEC
+                    Olímpia.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    Este projeto representa uma das minhas primeiras
+                    experiências de desenvolvimento dentro da disciplina
+                    de Desenvolvimento Web, na qual estou aprimorando minhas
+                    habilidades na criação e estruturação de páginas para a
+                    internet.
+                </p>
+
+                <h3>Minha formação</h3>
+
+                <p>
+                    Atualmente sou estudante do curso de Desenvolvimento de
+                    Software Multiplataforma e estou tendo contato com
+                    diferentes conceitos relacionados ao desenvolvimento
+                    de software e à tecnologia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Por que escolhi Nárnia?</h2>
+
+            <div class="linha"></div>
+
+            <div class="projeto">
+
+                <p>
+                    A escolha de As Crônicas de Nárnia para este projeto
+                    possui uma relação pessoal com o tema. Sou cristão e
+                    também sou fã das obras de C. S. Lewis.
+                </p>
+
+                <p>
+                    Uma das características que mais despertam meu interesse
+                    em Nárnia é justamente a maneira como Lewis utiliza uma
+                    história de fantasia para apresentar ideias e elementos
+                    relacionados ao cristianismo.
+                </p>
+
+                <p>
+                    Personagens como Aslan e Edmundo, além de acontecimentos
+                    como o sacrifício na Mesa de Pedra, permitem observar
+                    relações com conceitos como pecado, perdão, redenção,
+                    sacrifício e ressurreição.
+                </p>
+
+                <p>
+                    Por isso, escolhi esse tema para explorar não apenas
+                    uma obra que considero interessante, mas também a forma
+                    criativa como C. S. Lewis conseguiu unir literatura,
+                    fantasia e elementos de sua fé em uma mesma narrativa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Informações acadêmicas</h2>
+
+            <div class="linha"></div>
+
+            <div class="contato">
+
+                <div class="cartao">
+
+                    <h3>Curso</h3>
+
+                    <p>
+                        Desenvolvimento de Software Multiplataforma
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <h3>Instituição</h3>
+
+                    <p>
+                        FATEC Olímpia
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <h3>Disciplina</h3>
+
+                    <p>
+                        Desenvolvimento Web
+                    </p>
+
+                </div>
+
+
+                <div class="cartao">
+
+                    <h3>Projeto</h3>
+
+                    <p>
+                        Blog "Cristianismo em Nárnia"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Contato</h2>
+
+            <div class="linha"></div>
+
+            <div class="sobre">
+
+                <h3>E-mail</h3>
+
+                <p>
+                    Para entrar em contato comigo, utilize o endereço:
+                </p>
+
+                <p style="margin-top: 10px;">
+                    <a
+                        href="mailto:leo.rnovaes@gmail.com"
+                        class="email"
+                    >
+                        leo.rnovaes@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <p class="assinatura">
+            "Um projeto acadêmico que une desenvolvimento web,
+            literatura e uma história que atravessa gerações."
+        </p>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            <strong>Cristianismo em Nárnia</strong>
+        </p>
+
+        <p>
+            Projeto acadêmico — Desenvolvimento Web
+        </p>
+
+        <p>
+            FATEC Olímpia • Desenvolvimento de Software Multiplataforma
+        </p>
+
+        <p>
+            Desenvolvido por Leonardo Novaes
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
