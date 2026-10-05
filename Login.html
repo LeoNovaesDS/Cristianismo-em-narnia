@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Cristianismo em Nárnia</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                Cristianismo em <span>Nárnia</span>
+            </div>
+
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="detalhes.html">Detalhes</a>
+                <a href="contato.html">Sobre mim</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <h1>Entrar</h1>
+
+            <p class="subtitle">
+                Entre para continuar no Cristianismo em Nárnia
+            </p>
+
+
+            <form>
+
+                <div class="form-group">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="senha">Senha</label>
+
+                    <div class="password-container">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            id="togglePassword"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#" class="forgot-password">
+                    Esqueci minha senha
+                </a>
+
+
+                <button type="submit" class="login-button">
+                    Entrar
+                </button>
+
+            </form>
+
+
+            <p class="register">
+                Ainda não possui uma conta?
+                <a href="#">Cadastre-se</a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Cristianismo em Nárnia</p>
+    </footer>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
