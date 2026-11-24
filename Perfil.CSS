@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f4f1e8;
+    color: #26382b;
+}
+
+header {
+    background-color: #173d2a;
+    color: #f4d58d;
+    padding: 20px 0;
+    border-bottom: 4px solid #c9a24d;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: inherit;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f4d58d;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a,
+.logout-button {
+    color: white;
+    text-decoration: none;
+    font: inherit;
+    font-size: 15px;
+}
+
+nav a:hover,
+.logout-button:hover {
+    color: #f4d58d;
+}
+
+.logout-button {
+    padding: 8px 13px;
+    border: 1px solid #d5bd79;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+}
+
+main {
+    width: min(100% - 40px, 1000px);
+    margin: 45px auto;
+    flex: 1;
+}
+
+.profile-card,
+.catalog {
+    background: #fffdf7;
+    border: 1px solid #ddd2b5;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 26px 30px;
+    margin-bottom: 28px;
+}
+
+.profile-card > div {
+    min-width: 0;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #173d2a;
+    color: #f4d58d;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.eyebrow {
+    margin-bottom: 5px;
+    color: #806b32;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+h1,
+h2 {
+    color: #173d2a;
+}
+
+h1 {
+    font-size: 27px;
+}
+
+.welcome {
+    margin-top: 5px;
+}
+
+.user-email {
+    margin-top: 3px;
+    color: #6b705c;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.catalog {
+    padding: 30px;
+}
+
+.catalog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.catalog-description {
+    max-width: 540px;
+    color: #5e6255;
+    line-height: 1.5;
+}
+
+.search-field {
+    display: grid;
+    gap: 7px;
+    width: min(100%, 300px);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-field input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #c8c3b5;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.search-field input:focus {
+    outline: 2px solid #173d2a;
+    outline-offset: 2px;
+}
+
+.results-count {
+    min-height: 20px;
+    margin-bottom: 8px;
+    color: #6b705c;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #e3dcc9;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #e9e3d3;
+    line-height: 1.4;
+}
+
+th {
+    background: #173d2a;
+    color: #fffdf7;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f6ef;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.empty-state {
+    padding: 24px;
+    color: #6b705c;
+    text-align: center;
+}
+
+.table-note {
+    margin-top: 12px;
+    color: #6b705c;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer {
+    padding: 20px;
+    border-top: 4px solid #c9a24d;
+    background: #173d2a;
+    color: #ddd;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .header-container,
+    .catalog-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-container {
+        align-items: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .catalog,
+    .profile-card {
+        padding: 22px;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    main {
+        width: min(100% - 24px, 1000px);
+        margin: 24px auto;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .profile-card {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .avatar {
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .catalog {
+        padding: 18px 14px;
+    }
+
+    th,
+    td {
+        padding: 11px 10px;
+        font-size: 14px;
+    }
+}

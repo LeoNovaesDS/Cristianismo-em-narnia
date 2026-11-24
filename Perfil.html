@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil do usuário e catálogo pesquisável das Crônicas de Nárnia.">
+    <title>Meu perfil - Cristianismo em Nárnia</title>
+    <link rel="stylesheet" href="Perfil.CSS">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a class="logo" href="Index.html">Cristianismo em <span>Nárnia</span></a>
+            <nav aria-label="Navegação principal">
+                <a href="Index.html">Início</a>
+                <a href="Detalhes.html">Detalhes</a>
+                <a href="Contato.html">Sobre mim</a>
+                <button class="logout-button" id="logoutButton" type="button">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-card" aria-labelledby="profileHeading">
+            <div class="avatar" id="userInitials" aria-hidden="true">U</div>
+            <div>
+                <p class="eyebrow">ÁREA DO LEITOR</p>
+                <h1 id="profileHeading">Meu perfil</h1>
+                <p class="welcome">Bem-vindo(a), <strong id="userName">leitor(a)</strong>!</p>
+                <p class="user-email" id="userEmail"></p>
+            </div>
+        </section>
+
+        <section class="catalog" aria-labelledby="catalogHeading">
+            <div class="catalog-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE NÁRNIA</p>
+                    <h2 id="catalogHeading">Livros e temas</h2>
+                    <p class="catalog-description">Consulte os livros das Crônicas de Nárnia e alguns dos temas cristãos presentes em cada história.</p>
+                </div>
+                <label class="search-field" for="bookSearch">
+                    <span>Pesquisar na tabela</span>
+                    <input id="bookSearch" type="search" placeholder="Busque por livro ou tema..." autocomplete="off">
+                </label>
+            </div>
+
+            <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Livro</th>
+                            <th scope="col">Ano</th>
+                            <th scope="col">Tema em destaque</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booksTable">
+                        <tr>
+                            <td>1</td>
+                            <td>O Leão, a Feiticeira e o Guarda-Roupa</td>
+                            <td>1950</td>
+                            <td>Sacrifício e redenção</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Príncipe Caspian</td>
+                            <td>1951</td>
+                            <td>Fé e esperança</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A Viagem do Peregrino da Alvorada</td>
+                            <td>1952</td>
+                            <td>Tentação e transformação</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A Cadeira de Prata</td>
+                            <td>1953</td>
+                            <td>Perseverança e confiança</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>O Cavalo e seu Menino</td>
+                            <td>1954</td>
+                            <td>Providência e identidade</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>O Sobrinho do Mago</td>
+                            <td>1955</td>
+                            <td>Criação e origem do mal</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>A Última Batalha</td>
+                            <td>1956</td>
+                            <td>Juízo e renovação</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="empty-state" id="emptyState" hidden>Nenhum livro encontrado para essa pesquisa.</p>
+            </div>
+            <p class="table-note">Anos e ordem de publicação. Os temas são apresentados como uma interpretação para fins de estudo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cristianismo em Nárnia · Projeto acadêmico</p>
+    </footer>
+
+    <script src="Perfil.JS"></script>
+</body>
+
+</html>
